@@ -66,10 +66,10 @@ class Grille:
     def afficher(self) -> str:
         lignes: list[str] = []
         for ligne in self.grille:
-            lignes.append(" ".join(cell for cell in ligne))
-        separator = "-" * (self.COLONNES * 4 - 1)
-        header = " ".join(str(colonne + 1) for colonne in range(self.COLONNES))
-        return "\n".join([header, separator, *lignes])
+            lignes.append(" ".join(cell for cell in ligne)+" ")
+        separator = "-" * (self.COLONNES * 3)
+        header = "  ".join(str(colonne + 1) for colonne in range(self.COLONNES)) + " "
+        return " \n".join([header, separator, *lignes, separator])
 
     def __str__(self) -> str:
         return self.afficher()
