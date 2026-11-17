@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+import os
+
 from .joueur import Joueur
 from .partie import Partie
 
-import os
 
 def main() -> None:
     print("Bienvenue au Puissance 4 !")

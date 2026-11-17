@@ -18,7 +18,7 @@ class Partie:
 
     def jouer_coup(self, colonne: int) -> bool:
         """Joue un coup et retourne True si la partie est terminee."""
-        ligne = self.grille.jouer(colonne, self.joueur_actuel.symbole)
+        self.grille.jouer(colonne, self.joueur_actuel.symbole)
 
         if self.grille.est_victoire(self.joueur_actuel.symbole):
             self.gagnant = self.joueur_actuel
